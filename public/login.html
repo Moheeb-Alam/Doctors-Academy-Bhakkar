@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Login | Doctors Academy Bhakkar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+ <script src="/js/config.js"></script>
+<script src="/js/auth.js" defer></script>
+</head>
+<body class="login-page">
+  <main class="login-shell">
+    <section class="login-brand">
+      <div class="brand-mark">DA</div>
+      <p class="eyebrow">DOCTORS ACADEMY</p>
+      <h1>Manage your academy with clarity.</h1>
+      <p>Student records, fee transactions, and academy finances in one place.</p>
+      <div class="login-foot">Bhakkar · Academy Management Portal</div>
+    </section>
+    <section class="login-panel">
+      <div class="login-form-wrap">
+        <p class="eyebrow blue">ADMINISTRATOR ACCESS</p>
+        <h2>Welcome back</h2>
+        <p class="muted">Sign in using your academy admin account.</p>
+        <form id="login-form">
+          <label for="email">Email address</label>
+          <input id="email" type="email" autocomplete="username" placeholder="admin@example.com" required>
+          <label for="password">Password</label>
+          <input id="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+          <p id="login-error" class="form-error" role="alert"></p>
+          <button class="btn btn-primary full" id="login-button" type="submit">Sign in <span>→</span></button>
+        </form>
+        <p class="tiny muted">Admin accounts are created in your Supabase project. Public sign-up is intentionally disabled here.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | Doctors Academy Bhakkar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js" defer></script>
+  <script src="/js/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#"><span class="brand-mark small">DA</span><span><strong>Doctors Academy</strong><small>Bhakkar · Portal</small></span></a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-page="dashboard"><span class="nav-icon">▦</span> Dashboard</button>
+        <button class="nav-item" data-page="students"><span class="nav-icon">♙</span> Students</button>
+        <button class="nav-item" data-page="classes"><span class="nav-icon">▤</span> Classes & Sections</button>
+        <button class="nav-item" data-page="fees"><span class="nav-icon">₨</span> Fee Management</button>
+        <button class="nav-item" data-page="expenses"><span class="nav-icon">↗</span> Expenses</button>
+        <button class="nav-item" data-page="reports"><span class="nav-icon">▥</span> Financial Reports</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="secure-note"><span class="secure-dot"></span><span><strong>Secure workspace</strong><small>Admin access only</small></span></div><button class="nav-item logout" id="logout-button">↪ Sign out</button></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu" aria-label="Toggle navigation">☰</button>
+        <div><p class="top-eyebrow">DOCTORS ACADEMY BHAKKAR</p><h1 id="page-title">Dashboard</h1></div>
+        <div class="top-user"><span class="avatar">A</span><span><strong id="admin-name">Administrator</strong><small>Admin account</small></span></div>
+      </header>
+      <div class="content" id="content">
+        <div class="loading"><span class="spinner"></span> Loading academy records…</div>
+      </div>
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    </main>
+  </div>
+  <dialog id="record-dialog" class="record-dialog"><form id="record-form" method="dialog"><div class="dialog-head"><div><p class="eyebrow blue">ACADEMY RECORD</p><h2 id="dialog-title">Add record</h2></div><button type="button" class="icon-button" id="dialog-close" aria-label="Close dialog">×</button></div><div id="dialog-fields" class="form-grid"></div><p id="dialog-error" class="form-error" role="alert"></p><div class="dialog-actions"><button type="button" class="btn btn-secondary" id="dialog-cancel">Cancel</button><button type="submit" class="btn btn-primary" id="dialog-save">Save record</button></div></form></dialog>
+</body>
+</html>
